@@ -1,0 +1,1362 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/manuelodelain/sprite-anim#readme">sprite-anim (v0.2.0)</a>
+</h1>
+<h4>Simple spritesheet animation engine</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim">module sprite-anim</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.sprite-anim">
+            function <span class="apidocSignatureSpan"></span>sprite-anim
+            <span class="apidocSignatureSpan">(parser, renderer, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.CanvasRenderer">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>CanvasRenderer
+            <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.DOMRenderer">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>DOMRenderer
+            <span class="apidocSignatureSpan">(element, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.JSONArrayParser">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>JSONArrayParser
+            <span class="apidocSignatureSpan">(data, scaleFactor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.OffScreenCanvasRenderer">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>OffScreenCanvasRenderer
+            <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.SimpleParser">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>SimpleParser
+            <span class="apidocSignatureSpan">(sprite, frameSize, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>Ticker
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.super_">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sprite-anim.</span>CanvasRenderer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sprite-anim.</span>DOMRenderer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sprite-anim.</span>OffScreenCanvasRenderer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sprite-anim.</span>SimpleParser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sprite-anim.</span>Ticker.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sprite-anim.</span>super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.CanvasRenderer">module sprite-anim.CanvasRenderer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.CanvasRenderer.CanvasRenderer">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>CanvasRenderer
+            <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.CanvasRenderer.prototype">module sprite-anim.CanvasRenderer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.CanvasRenderer.prototype.render">
+            function <span class="apidocSignatureSpan">sprite-anim.CanvasRenderer.prototype.</span>render
+            <span class="apidocSignatureSpan">(frame, animation)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.DOMRenderer">module sprite-anim.DOMRenderer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.DOMRenderer.DOMRenderer">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>DOMRenderer
+            <span class="apidocSignatureSpan">(element, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.DOMRenderer.prototype">module sprite-anim.DOMRenderer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.DOMRenderer.prototype.render">
+            function <span class="apidocSignatureSpan">sprite-anim.DOMRenderer.prototype.</span>render
+            <span class="apidocSignatureSpan">(frame)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.DOMRenderer.prototype.updateSprite">
+            function <span class="apidocSignatureSpan">sprite-anim.DOMRenderer.prototype.</span>updateSprite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.OffScreenCanvasRenderer">module sprite-anim.OffScreenCanvasRenderer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.OffScreenCanvasRenderer.OffScreenCanvasRenderer">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>OffScreenCanvasRenderer
+            <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.OffScreenCanvasRenderer.prototype">module sprite-anim.OffScreenCanvasRenderer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.OffScreenCanvasRenderer.prototype.render">
+            function <span class="apidocSignatureSpan">sprite-anim.OffScreenCanvasRenderer.prototype.</span>render
+            <span class="apidocSignatureSpan">(frame, animation)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.SimpleParser">module sprite-anim.SimpleParser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.SimpleParser.SimpleParser">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>SimpleParser
+            <span class="apidocSignatureSpan">(sprite, frameSize, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.SimpleParser.prototype">module sprite-anim.SimpleParser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.SimpleParser.prototype.initSpriteFrames">
+            function <span class="apidocSignatureSpan">sprite-anim.SimpleParser.prototype.</span>initSpriteFrames
+            <span class="apidocSignatureSpan">(sprite, spriteIndex)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.Ticker">module sprite-anim.Ticker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker.Ticker">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>Ticker
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.Ticker.prototype">module sprite-anim.Ticker.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker.prototype.add">
+            function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>add
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker.prototype.onTick">
+            function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>onTick
+            <span class="apidocSignatureSpan">(timeStamp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker.prototype.pause">
+            function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker.prototype.remove">
+            function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>remove
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.Ticker.prototype.start">
+            function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.super_">module sprite-anim.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.super_.super_">
+            function <span class="apidocSignatureSpan">sprite-anim.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sprite-anim.super_.prototype">module sprite-anim.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.super_.prototype.emit">
+            function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>emit
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.super_.prototype.off">
+            function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>off
+            <span class="apidocSignatureSpan">(name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.super_.prototype.on">
+            function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>on
+            <span class="apidocSignatureSpan">(name, callback, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sprite-anim.super_.prototype.once">
+            function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>once
+            <span class="apidocSignatureSpan">(name, callback, ctx)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim" id="apidoc.module.sprite-anim">module sprite-anim</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.sprite-anim" id="apidoc.element.sprite-anim.sprite-anim">
+        function <span class="apidocSignatureSpan"></span>sprite-anim
+        <span class="apidocSignatureSpan">(parser, renderer, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sprite-anim = function (parser, renderer, options) {
+  options = options || {};
+
+  this.parser = parser;
+  this.renderer = renderer;
+
+  var defaultOptions = {
+    manualUpdate: false,
+    frameRate: 60,
+    loop: false,
+    yoyo: false,
+    numFrames: parser.numFrames
+  };
+
+  defaultValues(this, defaultOptions, options);
+
+  this.lastFrame = this.numFrames - 1;
+
+  this.enterFrameId = -1;
+  this.enterFrameCb = this.onEnterFrame.bind(this);
+
+  this.currentFrame = 0;
+  this.isPlaying = false;
+  this.reversed = false;
+  this.complete = false;
+
+  this.lastFrameTime = 0;
+  this.interval = 1000 / this.frameRate;
+
+  this.x = 0;
+  this.y = 0;
+
+  this.alpha = 1;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.CanvasRenderer" id="apidoc.element.sprite-anim.CanvasRenderer">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>CanvasRenderer
+        <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CanvasRenderer = function (canvas, sprite, options){
+  options = options || {};
+
+  var defaultOptions = {
+    clearFrame: true
+  };
+
+  defaultValues(this, defaultOptions, options);
+
+  this.canvas = canvas;
+
+  if (isArray(sprite)){
+    this.sprites = sprite;
+  }else{
+    this.sprites = [sprite];
+  }
+
+  this.sprite = sprite;
+
+  this.context = canvas.getContext('2d');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Canvas element with frames data
+
+```
+var img = new Image();
+
+img.addEventListener('load', function(){
+  var element = document.getElementById('anim');
+  var renderer = new SpriteAnim.<span class="apidocCodeKeywordSpan">CanvasRenderer</span>(element, img);
+  var parser = new SpriteAnim.JSONArrayParser(framesData); // framesData is your JSON data
+  var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+  anim.play();
+});
+
+img.src = 'images/anim.png';// your spritesheet image
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.DOMRenderer" id="apidoc.element.sprite-anim.DOMRenderer">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>DOMRenderer
+        <span class="apidocSignatureSpan">(element, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DOMRenderer = function (element, options){
+  options = options || {};
+
+  this.element = element;
+
+  this.scaleFactor = options.scaleFactor || 1;
+  this.sprite = options.sprite;
+
+  this.spriteIndex = 0;
+  if (this.sprite) this.updateSprite();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Examples
+
+#### DOM element with spritesheet and frame dimensions
+
+```
+var element = document.getElementById('anim');
+var renderer = new SpriteAnim.<span class="apidocCodeKeywordSpan">DOMRenderer</span>(element);
+var parser = new SpriteAnim.SimpleParser({width: 1410, height: 3960}, {width: 470, height: 120});
+var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+anim.play();
+```
+
+#### Canvas element with frames data
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.JSONArrayParser" id="apidoc.element.sprite-anim.JSONArrayParser">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>JSONArrayParser
+        <span class="apidocSignatureSpan">(data, scaleFactor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSONArrayParser = function (data, scaleFactor){
+  scaleFactor = scaleFactor ||Â&nbsp;1;
+
+  this.frames = [];
+  this.numFrames = data.frames.length;
+
+  var frame;
+
+  for (var i = 0; i &lt; this.numFrames; i++){
+    frame = data.frames[i].frame;
+
+    this.frames.push({
+      index: i,
+      x: frame.x * scaleFactor,
+      y: frame.y * scaleFactor,
+      width: frame.w * scaleFactor,
+      height: frame.h * scaleFactor
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```
+var img = new Image();
+
+img.addEventListener('load', function(){
+  var element = document.getElementById('anim');
+  var renderer = new SpriteAnim.CanvasRenderer(element, img);
+  var parser = new SpriteAnim.<span class="apidocCodeKeywordSpan">JSONArrayParser</span>(framesData); // framesData is your JSON
+ data
+  var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+  anim.play();
+});
+
+img.src = 'images/anim.png';// your spritesheet image
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.OffScreenCanvasRenderer" id="apidoc.element.sprite-anim.OffScreenCanvasRenderer">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>OffScreenCanvasRenderer
+        <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">OffScreenCanvasRenderer = function (canvas, sprite, options){
+  options = options || {};
+
+  this.canvas = canvas;
+  this.sprite = sprite;
+
+  var defaultOptions = {
+    clearFrame: true
+  };
+
+  defaultValues(this, defaultOptions, options);
+
+  this.buffer = document.createElement('canvas');
+  this.buffer.width = sprite.width;
+  this.buffer.height = sprite.height;
+
+  this.bufferContext = this.buffer.getContext('2d');
+  this.bufferContext.drawImage(sprite, 0, 0);
+
+  this.context = canvas.getContext('2d');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.SimpleParser" id="apidoc.element.sprite-anim.SimpleParser">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>SimpleParser
+        <span class="apidocSignatureSpan">(sprite, frameSize, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SimpleParser = function (sprite, frameSize, options){
+  this.frameSize = frameSize;
+
+  this.options = options ||Â&nbsp;{};
+  this.scaleFactor = this.options.scaleFactor || 1;
+  this.numFrames = this.options.numFrames;
+
+  this.frames = [];
+
+  if (isArray(sprite)){
+    for (var i = 0, n = sprite.length; i &lt; n; i++){
+      this.initSpriteFrames(sprite[i], i);
+    }
+  }else{
+    this.initSpriteFrames(sprite, 0);
+  }
+
+  if (!this.numFrames) this.numFrames = this.frames.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Examples
+
+#### DOM element with spritesheet and frame dimensions
+
+```
+var element = document.getElementById('anim');
+var renderer = new SpriteAnim.DOMRenderer(element);
+var parser = new SpriteAnim.<span class="apidocCodeKeywordSpan">SimpleParser</span>({width: 1410, height: 3960}, {width: 470, height
+: 120});
+var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+anim.play();
+```
+
+#### Canvas element with frames data
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker" id="apidoc.element.sprite-anim.Ticker">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>Ticker
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Ticker = function (){
+  this.items = [];
+
+  this.isRunning = false;
+  this.tickId = -1;
+  this.tickCb = this.onTick.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.super_" id="apidoc.element.sprite-anim.super_">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function E() {
+  // Keep this empty so it's easier to inherit from
+  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.CanvasRenderer" id="apidoc.module.sprite-anim.CanvasRenderer">module sprite-anim.CanvasRenderer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.CanvasRenderer.CanvasRenderer" id="apidoc.element.sprite-anim.CanvasRenderer.CanvasRenderer">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>CanvasRenderer
+        <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CanvasRenderer = function (canvas, sprite, options){
+  options = options || {};
+
+  var defaultOptions = {
+    clearFrame: true
+  };
+
+  defaultValues(this, defaultOptions, options);
+
+  this.canvas = canvas;
+
+  if (isArray(sprite)){
+    this.sprites = sprite;
+  }else{
+    this.sprites = [sprite];
+  }
+
+  this.sprite = sprite;
+
+  this.context = canvas.getContext('2d');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Canvas element with frames data
+
+```
+var img = new Image();
+
+img.addEventListener('load', function(){
+  var element = document.getElementById('anim');
+  var renderer = new SpriteAnim.<span class="apidocCodeKeywordSpan">CanvasRenderer</span>(element, img);
+  var parser = new SpriteAnim.JSONArrayParser(framesData); // framesData is your JSON data
+  var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+  anim.play();
+});
+
+img.src = 'images/anim.png';// your spritesheet image
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.CanvasRenderer.prototype" id="apidoc.module.sprite-anim.CanvasRenderer.prototype">module sprite-anim.CanvasRenderer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.CanvasRenderer.prototype.render" id="apidoc.element.sprite-anim.CanvasRenderer.prototype.render">
+        function <span class="apidocSignatureSpan">sprite-anim.CanvasRenderer.prototype.</span>render
+        <span class="apidocSignatureSpan">(frame, animation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (frame, animation) {
+  if (this.clearFrame) this.context.clearRect(0, 0, frame.width, frame.height);
+
+  this.context.globalAlpha = animation.alpha;
+
+  this.context.drawImage(
+    this.sprites[frame.spriteIndex],
+    frame.x,
+    frame.y,
+    frame.width,
+    frame.height,
+    animation.x,
+    animation.y,
+    frame.width,
+    frame.height
+   );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.DOMRenderer" id="apidoc.module.sprite-anim.DOMRenderer">module sprite-anim.DOMRenderer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.DOMRenderer.DOMRenderer" id="apidoc.element.sprite-anim.DOMRenderer.DOMRenderer">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>DOMRenderer
+        <span class="apidocSignatureSpan">(element, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DOMRenderer = function (element, options){
+  options = options || {};
+
+  this.element = element;
+
+  this.scaleFactor = options.scaleFactor || 1;
+  this.sprite = options.sprite;
+
+  this.spriteIndex = 0;
+  if (this.sprite) this.updateSprite();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Examples
+
+#### DOM element with spritesheet and frame dimensions
+
+```
+var element = document.getElementById('anim');
+var renderer = new SpriteAnim.<span class="apidocCodeKeywordSpan">DOMRenderer</span>(element);
+var parser = new SpriteAnim.SimpleParser({width: 1410, height: 3960}, {width: 470, height: 120});
+var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+anim.play();
+```
+
+#### Canvas element with frames data
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.DOMRenderer.prototype" id="apidoc.module.sprite-anim.DOMRenderer.prototype">module sprite-anim.DOMRenderer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.DOMRenderer.prototype.render" id="apidoc.element.sprite-anim.DOMRenderer.prototype.render">
+        function <span class="apidocSignatureSpan">sprite-anim.DOMRenderer.prototype.</span>render
+        <span class="apidocSignatureSpan">(frame)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (frame) {
+  if (frame.spriteIndex !== this.spriteIndex){
+    this.spriteIndex = frame.spriteIndex;
+
+    this.updateSprite();
+  }
+
+  this.element.style.backgroundPosition = '-' + frame.x * this.scaleFactor + 'px -' + frame.y * this.scaleFactor + 'px';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.DOMRenderer.prototype.updateSprite" id="apidoc.element.sprite-anim.DOMRenderer.prototype.updateSprite">
+        function <span class="apidocSignatureSpan">sprite-anim.DOMRenderer.prototype.</span>updateSprite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateSprite = function () {
+  var sprite;
+
+  if (isArray(this.sprite)){
+    sprite = this.sprite[this.spriteIndex];
+  }else{
+    sprite = this.sprite;
+  }
+
+  var spriteWidth = sprite.naturalWidth * this.scaleFactor;
+  var spriteHeight = sprite.naturalHeight * this.scaleFactor;
+
+  this.element.style.backgroundImage = 'url(' + sprite.src + ')';
+  this.element.style.backgroundSize = spriteWidth + 'px ' + spriteHeight + 'px';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.OffScreenCanvasRenderer" id="apidoc.module.sprite-anim.OffScreenCanvasRenderer">module sprite-anim.OffScreenCanvasRenderer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.OffScreenCanvasRenderer.OffScreenCanvasRenderer" id="apidoc.element.sprite-anim.OffScreenCanvasRenderer.OffScreenCanvasRenderer">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>OffScreenCanvasRenderer
+        <span class="apidocSignatureSpan">(canvas, sprite, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">OffScreenCanvasRenderer = function (canvas, sprite, options){
+  options = options || {};
+
+  this.canvas = canvas;
+  this.sprite = sprite;
+
+  var defaultOptions = {
+    clearFrame: true
+  };
+
+  defaultValues(this, defaultOptions, options);
+
+  this.buffer = document.createElement('canvas');
+  this.buffer.width = sprite.width;
+  this.buffer.height = sprite.height;
+
+  this.bufferContext = this.buffer.getContext('2d');
+  this.bufferContext.drawImage(sprite, 0, 0);
+
+  this.context = canvas.getContext('2d');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.OffScreenCanvasRenderer.prototype" id="apidoc.module.sprite-anim.OffScreenCanvasRenderer.prototype">module sprite-anim.OffScreenCanvasRenderer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.OffScreenCanvasRenderer.prototype.render" id="apidoc.element.sprite-anim.OffScreenCanvasRenderer.prototype.render">
+        function <span class="apidocSignatureSpan">sprite-anim.OffScreenCanvasRenderer.prototype.</span>render
+        <span class="apidocSignatureSpan">(frame, animation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (frame, animation) {
+  if (this.clearFrame) this.context.clearRect(0, 0, frame.width, frame.height);
+
+  this.context.globalAlpha = animation.alpha;
+
+  this.context.putImageData(
+    this.bufferContext.getImageData(frame.x,frame.y,frame.width,frame.height),
+    animation.x,
+    animation.y,
+    0,
+    0,
+    frame.width,
+    frame.height
+   );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.SimpleParser" id="apidoc.module.sprite-anim.SimpleParser">module sprite-anim.SimpleParser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.SimpleParser.SimpleParser" id="apidoc.element.sprite-anim.SimpleParser.SimpleParser">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>SimpleParser
+        <span class="apidocSignatureSpan">(sprite, frameSize, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SimpleParser = function (sprite, frameSize, options){
+  this.frameSize = frameSize;
+
+  this.options = options ||Â&nbsp;{};
+  this.scaleFactor = this.options.scaleFactor || 1;
+  this.numFrames = this.options.numFrames;
+
+  this.frames = [];
+
+  if (isArray(sprite)){
+    for (var i = 0, n = sprite.length; i &lt; n; i++){
+      this.initSpriteFrames(sprite[i], i);
+    }
+  }else{
+    this.initSpriteFrames(sprite, 0);
+  }
+
+  if (!this.numFrames) this.numFrames = this.frames.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Examples
+
+#### DOM element with spritesheet and frame dimensions
+
+```
+var element = document.getElementById('anim');
+var renderer = new SpriteAnim.DOMRenderer(element);
+var parser = new SpriteAnim.<span class="apidocCodeKeywordSpan">SimpleParser</span>({width: 1410, height: 3960}, {width: 470, height
+: 120});
+var anim = new SpriteAnim(parser, renderer, {frameRate: 25});
+
+anim.play();
+```
+
+#### Canvas element with frames data
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.SimpleParser.prototype" id="apidoc.module.sprite-anim.SimpleParser.prototype">module sprite-anim.SimpleParser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.SimpleParser.prototype.initSpriteFrames" id="apidoc.element.sprite-anim.SimpleParser.prototype.initSpriteFrames">
+        function <span class="apidocSignatureSpan">sprite-anim.SimpleParser.prototype.</span>initSpriteFrames
+        <span class="apidocSignatureSpan">(sprite, spriteIndex)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initSpriteFrames = function (sprite, spriteIndex){
+  var spriteWidth = sprite.naturalWidth || sprite.width;
+  var spriteHeight = sprite.naturalHeight || sprite.height;
+
+  spriteWidth *= this.scaleFactor;
+  spriteHeight *= this.scaleFactor;
+
+  var numFramesX = Math.ceil(spriteWidth / this.frameSize.width);
+  var numFramesY = Math.ceil(spriteHeight / this.frameSize.height);
+
+  loopY:
+  for (var i = 0; i &lt; numFramesY; i++) {
+
+    for (var j = 0; j &lt; numFramesX; j++) {
+      this.frames.push({
+        x: j * this.frameSize.width,
+        y: i * this.frameSize.height,
+        index: this.frames.length,
+        width: this.frameSize.width,
+        height: this.frameSize.height,
+        spriteIndex: spriteIndex
+      });
+
+      if (this.frames.length === this.numFrames) break loopY;
+    }
+
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.Ticker" id="apidoc.module.sprite-anim.Ticker">module sprite-anim.Ticker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker.Ticker" id="apidoc.element.sprite-anim.Ticker.Ticker">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>Ticker
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Ticker = function (){
+  this.items = [];
+
+  this.isRunning = false;
+  this.tickId = -1;
+  this.tickCb = this.onTick.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.Ticker.prototype" id="apidoc.module.sprite-anim.Ticker.prototype">module sprite-anim.Ticker.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker.prototype.add" id="apidoc.element.sprite-anim.Ticker.prototype.add">
+        function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>add
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (callback) {
+  var id = itemId++;
+
+  this.items.push({
+    id: id,
+    cb: callback
+  });
+
+  if (!this.isRunning) this.start();
+
+  return id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker.prototype.onTick" id="apidoc.element.sprite-anim.Ticker.prototype.onTick">
+        function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>onTick
+        <span class="apidocSignatureSpan">(timeStamp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onTick = function (timeStamp) {
+  this.tickId = raf(this.tickCb);
+
+  for (var i = 0, n = this.items.length; i &lt; n; i++){
+    if (this.items[i]) this.items[i].cb(timeStamp);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker.prototype.pause" id="apidoc.element.sprite-anim.Ticker.prototype.pause">
+        function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  this.isRunning = false;
+
+  raf.cancel(this.tickId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+for (var i = 0, n = this.items.length; i &lt; n; i++){
+  if (this.items[i].id === id){
+    item = this.items.splice(i, 1)[0];
+    break;
+  }
+}
+
+if (this.items.length === 0) this.<span class="apidocCodeKeywordSpan">pause</span>();
+
+return item;
+};
+
+Ticker.prototype.onTick = function(timeStamp) {
+this.tickId = raf(this.tickCb);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker.prototype.remove" id="apidoc.element.sprite-anim.Ticker.prototype.remove">
+        function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>remove
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (id) {
+  var item;
+
+  for (var i = 0, n = this.items.length; i &lt; n; i++){
+    if (this.items[i].id === id){
+      item = this.items.splice(i, 1)[0];
+      break;
+    }
+  }
+
+  if (this.items.length === 0) this.pause();
+
+  return item;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.Ticker.prototype.start" id="apidoc.element.sprite-anim.Ticker.prototype.start">
+        function <span class="apidocSignatureSpan">sprite-anim.Ticker.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  this.isRunning = true;
+
+  this.tickId = raf(this.tickCb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var id = itemId++;
+
+this.items.push({
+  id: id,
+  cb: callback
+});
+
+if (!this.isRunning) this.<span class="apidocCodeKeywordSpan">start</span>();
+
+return id;
+};
+
+Ticker.prototype.remove = function(id) {
+var item;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.super_" id="apidoc.module.sprite-anim.super_">module sprite-anim.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.super_.super_" id="apidoc.element.sprite-anim.super_.super_">
+        function <span class="apidocSignatureSpan">sprite-anim.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function E() {
+  // Keep this empty so it's easier to inherit from
+  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sprite-anim.super_.prototype" id="apidoc.module.sprite-anim.super_.prototype">module sprite-anim.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.super_.prototype.emit" id="apidoc.element.sprite-anim.super_.prototype.emit">
+        function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>emit
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (name) {
+  var data = [].slice.call(arguments, 1);
+  var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
+  var i = 0;
+  var len = evtArr.length;
+
+  for (i; i &lt; len; i++) {
+    evtArr[i].fn.apply(evtArr[i].ctx, data);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.super_.prototype.off" id="apidoc.element.sprite-anim.super_.prototype.off">
+        function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>off
+        <span class="apidocSignatureSpan">(name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (name, callback) {
+  var e = this.e || (this.e = {});
+  var evts = e[name];
+  var liveEvents = [];
+
+  if (evts &amp;&amp; callback) {
+    for (var i = 0, len = evts.length; i &lt; len; i++) {
+      if (evts[i].fn !== callback &amp;&amp; evts[i].fn._ !== callback)
+        liveEvents.push(evts[i]);
+    }
+  }
+
+  // Remove event from queue to prevent memory leak
+  // Suggested by https://github.com/lazd
+  // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
+
+  (liveEvents.length)
+    ? e[name] = liveEvents
+    : delete e[name];
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.super_.prototype.on" id="apidoc.element.sprite-anim.super_.prototype.on">
+        function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>on
+        <span class="apidocSignatureSpan">(name, callback, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (name, callback, ctx) {
+  var e = this.e || (this.e = {});
+
+  (e[name] || (e[name] = [])).push({
+    fn: callback,
+    ctx: ctx
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sprite-anim.super_.prototype.once" id="apidoc.element.sprite-anim.super_.prototype.once">
+        function <span class="apidocSignatureSpan">sprite-anim.super_.prototype.</span>once
+        <span class="apidocSignatureSpan">(name, callback, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (name, callback, ctx) {
+  var self = this;
+  function listener () {
+    self.off(name, listener);
+    callback.apply(ctx, arguments);
+  };
+
+  listener._ = callback
+  return this.on(name, listener, ctx);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
